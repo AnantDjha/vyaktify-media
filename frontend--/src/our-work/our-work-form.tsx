@@ -4,6 +4,7 @@ import axios from "axios";
 import WorkForm from "./temp-form";
 import { useNavigate } from "react-router-dom";
 import { AlertCircle, Check, X } from "lucide-react";
+import { BACKEND_URL } from "@/constant";
 
 interface Message {
     type: 'success' | 'error';
@@ -80,7 +81,7 @@ export function AddWorkPage() {
             }
 
             const response = await axios.post(
-                "BACKEND_URL/post-our-works",
+                `${BACKEND_URL}/post-our-works`,
                 formData,
                 {
                     headers: {

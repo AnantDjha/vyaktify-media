@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Globe, Sparkles, Zap, Target, Award, Linkedin, Instagram, ExternalLink, AlertCircle, Check, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import axios from "axios"
+import { BACKEND_URL } from "@/constant"
 
 interface Message {
     type: 'success' | 'error';
@@ -41,7 +42,7 @@ export default function ContactPage() {
         setMessage(null);
 
         try {
-            const res = await axios.post("BACKEND_URL/send-contact-mail", {
+            const res = await axios.post(`${BACKEND_URL}/send-contact-mail`, {
                 name: formData.name,
                 email: formData.email,
                 desc: formData.description,

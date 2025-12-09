@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { CheckCircle, Eye, EyeOff, Lock, Mail, Sparkles, User, UserCircle, X, AlertCircle, Check } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
+import { BACKEND_URL } from "@/constant"
 
 // Validation schema
 const signupSchema = z.object({
@@ -89,7 +90,7 @@ export default function SignUpForm() {
         setMessage(null) // Clear any existing message
 
         try {
-            const res = await axios.post("BACKEND_URL/register", { ...data, user_id: data.userId })
+            const res = await axios.post(`${BACKEND_URL}/register`, { ...data, user_id: data.userId })
 
             if (res.data.type === 'error') {
                 setMessage({

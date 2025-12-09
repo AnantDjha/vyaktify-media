@@ -33,6 +33,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { BACKEND_URL } from "@/constant"
 
 // Validation schemas
 const loginSchema = z.object({
@@ -113,7 +114,7 @@ export default function LoginForm() {
                 ? { email: data.identifier, password: data.password }
                 : { userId: data.identifier, password: data.password }
 
-            const res = await axios.post("BACKEND_URL/login", loginPayload, {
+            const res = await axios.post(`${BACKEND_URL}/login`, loginPayload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("session") as string}`
                 }

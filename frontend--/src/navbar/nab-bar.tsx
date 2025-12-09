@@ -29,6 +29,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Popover, PopoverContent, PopoverTrigger } from "../components/ui/popover";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../components/ui/tooltip";
 import axios from "axios";
+import { BACKEND_URL } from "@/constant";
 
 // Mock logo component - replace with your actual logo
 const Logo = ({ white }: { white?: boolean }) => (
@@ -87,7 +88,7 @@ const Navbar = () => {
             setMessage(null)
 
             try {
-                const res = await axios.post("BACKEND_URL/send-contact-mail", {
+                const res = await axios.post(`${BACKEND_URL}/send-contact-mail`, {
                     name: formData.name,
                     email: formData.email,
                     desc: formData.description,
