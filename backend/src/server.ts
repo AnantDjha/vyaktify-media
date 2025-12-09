@@ -159,8 +159,8 @@ app.post("/send-contact-mail", async (request: Request, response: Response) => {
             </html>
 
         `
-        await sendMail(email, "We’ve Received Your Message — Vyaktify Media Support", "", html);
-
+        const a = await sendMail(email, "We’ve Received Your Message — Vyaktify Media Support", "", html);
+        if (!a) throw new Error("Something went wrong!")
 
         const body = `
             the customer name ${name} just contacted you\n
@@ -168,8 +168,9 @@ app.post("/send-contact-mail", async (request: Request, response: Response) => {
             mobile: ${mobile},
             description: ${desc}
             
-        `
-        await sendMail("aayushjha0112@gmail.com", "hey sahil someone contacted you!", body, '')
+            `
+        const b = await sendMail("aayushjha0112@gmail.com", "hey sahil someone contacted you!", body, '')
+        if (!b) throw new Error("Something went wrong!")
 
         response.status(200).json({ type: "success", message: "Thanks for contacting us!" });
     } catch (error) {

@@ -3,10 +3,12 @@ import nodemailer from "nodemailer";
 type SendMailFunction = (email: string, subject: string, text: string, html: string) => Promise<boolean>;
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // use SSL
     auth: {
         user: "aayushjha0112@gmail.com",
-        pass: "ktfn tohw kaxu hyds", // Use the generated App Password
+        pass: "ktfn tohw kaxu hyds",
     },
 });
 
