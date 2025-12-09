@@ -113,7 +113,7 @@ export default function LoginForm() {
                 ? { email: data.identifier, password: data.password }
                 : { userId: data.identifier, password: data.password }
 
-            const res = await axios.post("http://localhost:5000/login", loginPayload, {
+            const res = await axios.post("BACKEND_URL/login", loginPayload, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("session") as string}`
                 }

@@ -124,7 +124,7 @@ export default function WorksList() {
     const fetchWorks = async () => {
         setLoading(true)
         try {
-            const response = await axios.get("http://localhost:5000/get-our-works")
+            const response = await axios.get("BACKEND_URL/get-our-works")
             setWorks(response.data.data || response.data)
         } catch (error) {
             console.error("Error fetching works:", error)
@@ -143,7 +143,7 @@ export default function WorksList() {
         setConfirmDelete(null)
 
         try {
-            const response = await axios.delete(`http://localhost:5000/delete-work`, {
+            const response = await axios.delete(`BACKEND_URL/delete-work`, {
                 params: { id },
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("session") as string}`

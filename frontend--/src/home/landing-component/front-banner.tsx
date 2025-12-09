@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import bannerImg from "@/assets/banner_image.jpg";
 import { Button } from "../../components/ui/button";
+import { Link } from "react-router-dom";
 
 export const FrontBanner = () => {
     return (
@@ -120,19 +121,22 @@ export const FrontBanner = () => {
                         <Button
                             size="lg"
                             className="bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-700 hover:to-yellow-600 hover:to-cyan-700 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                            asChild
                         >
-                            Get Started
-                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            <Link to="/services">
+                                Get Started
+                                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            </Link>
                         </Button>
 
-                        <Button
+                        {/* <Button
                             size="lg"
                             variant="outline"
                             className="bg-white/90 backdrop-blur-sm border-gray-300 text-gray-800 hover:bg-white hover:border-blue-500 hover:text-blue-600 px-8 py-6 text-lg rounded-full shadow-sm group"
                         >
                             <Play className="mr-2 h-5 w-5" />
                             Watch Demo
-                        </Button>
+                        </Button> */}
                     </motion.div>
 
                     {/* Stats */}
@@ -144,7 +148,7 @@ export const FrontBanner = () => {
                     >
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {[
-                                { value: "500+", label: "Projects Delivered" },
+                                { value: "250+", label: "Projects Delivered" },
                                 { value: "99%", label: "Client Satisfaction" },
                                 { value: "24/7", label: "Support" },
                                 { value: "360°", label: "Strategy" }

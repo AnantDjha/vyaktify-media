@@ -41,7 +41,7 @@ export default function ContactPage() {
         setMessage(null);
 
         try {
-            const res = await axios.post("http://localhost:5000/send-contact-mail", {
+            const res = await axios.post("BACKEND_URL/send-contact-mail", {
                 name: formData.name,
                 email: formData.email,
                 desc: formData.description,

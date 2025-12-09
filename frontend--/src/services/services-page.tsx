@@ -250,19 +250,10 @@ export default function ServicesPage() {
             try {
                 setLoading(true)
                 // Simulating API call - Replace with your actual API endpoint
-                const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=6')
-
-                // If API call is successful, you can map it to your service structure
-                // For now, we'll use the static data
-                if (response.data && response.data.length > 0) {
-                    // Here you would map API response to your service structure
-                    // For demo, we keep using static data
-                    setServices(servicesData)
-                }
-                setError(null)
+                throw new Error("just a error")
             } catch (err) {
                 console.error('Error fetching services:', err)
-                setError('Failed to load services. Using sample data.')
+                setError('')
                 setServices(servicesData)
             } finally {
                 setLoading(false)
@@ -622,7 +613,7 @@ export default function ServicesPage() {
                                     Let's discuss how our services can transform your digital presence and deliver exceptional business results.
                                 </p>
 
-                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <Button className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white font-semibold hover:from-amber-600 hover:to-yellow-700 px-8 py-3">
                                         <Sparkles className="w-5 h-5 mr-2" />
                                         Start Your Project
@@ -630,7 +621,7 @@ export default function ServicesPage() {
                                     <Button variant="outline" className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-3">
                                         View All Services
                                     </Button>
-                                </div>
+                                </div> */}
                             </div>
                         </CardContent>
                     </Card>

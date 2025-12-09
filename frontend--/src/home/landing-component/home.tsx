@@ -245,10 +245,23 @@ const ContentSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="grid lg:grid-cols-2 gap-12 items-center"
+                        className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center"
                     >
+                        {/* Mobile: Image First */}
+                        <div className="lg:hidden relative w-full order-1">
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="/sideImg1.jpg"
+                                    alt="Branding & Content Foundation"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-2xl"></div>
+                            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-full blur-2xl"></div>
+                        </div>
+
                         {/* Left side - Text */}
-                        <div className="space-y-8">
+                        <div className="space-y-8 order-2 lg:order-1">
                             <div>
                                 <div className="inline-flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-amber-500/10 rounded-lg">
@@ -302,18 +315,15 @@ const ContentSection = () => {
                             </div>
                         </div>
 
-                        {/* Right side - Image */}
-                        <div className="relative">
-                            {/* Main Image Container */}
-                            <div className="">
+                        {/* Desktop: Image Second */}
+                        <div className="hidden lg:block relative order-2">
+                            <div className="rounded-2xl overflow-hidden">
                                 <img
                                     src="/sideImg1.jpg"
                                     alt="Branding & Content Foundation"
-                                    className="w-full h-full"
+                                    className="w-full h-auto object-cover"
                                 />
                             </div>
-
-                            {/* Floating Elements */}
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-2xl"></div>
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-full blur-2xl"></div>
                         </div>
@@ -325,25 +335,36 @@ const ContentSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="grid lg:grid-cols-2 gap-12 items-center"
+                        className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center"
                     >
-                        {/* Right side - Image */}
-                        <div className="relative">
-                            {/* Main Image Container */}
-                            <div className="">
+                        {/* Mobile: Image First */}
+                        <div className="lg:hidden relative w-full order-1">
+                            <div className="rounded-2xl overflow-hidden">
                                 <img
-                                    src="/sideImg1.jpg"
+                                    src="/sideImg2.jpg"
                                     alt="Community & Lead Generation"
-                                    className="w-full h-full"
+                                    className="w-full h-auto object-cover"
                                 />
                             </div>
-
-                            {/* Floating Elements */}
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-full blur-2xl"></div>
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-2xl"></div>
                         </div>
-                        {/* Left side - Text */}
-                        <div className="space-y-8">
+
+                        {/* Desktop: Image First */}
+                        <div className="hidden lg:block relative order-1">
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="/sideImg2.jpg"
+                                    alt="Community & Lead Generation"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-full blur-2xl"></div>
+                            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-2xl"></div>
+                        </div>
+
+                        {/* Text (Always Second on Mobile, Second on Desktop too for this card) */}
+                        <div className="space-y-8 order-2">
                             <div>
                                 <div className="inline-flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-yellow-500/10 rounded-lg">
@@ -396,8 +417,6 @@ const ContentSection = () => {
                                 </div>
                             </div>
                         </div>
-
-
                     </motion.div>
 
                     {/* Card 3: Influencer Collaborations */}
@@ -406,10 +425,23 @@ const ContentSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                         viewport={{ once: true }}
-                        className="grid lg:grid-cols-2 gap-12 items-center"
+                        className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center"
                     >
-                        {/* Left side - Text */}
-                        <div className="space-y-8">
+                        {/* Mobile: Image First */}
+                        <div className="lg:hidden relative w-full order-1">
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="/sideImg4.jpg"
+                                    alt="Influencer Collaborations"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-600/20 to-yellow-600/20 rounded-full blur-2xl"></div>
+                            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-yellow-600/20 to-amber-600/20 rounded-full blur-2xl"></div>
+                        </div>
+
+                        {/* Text */}
+                        <div className="space-y-8 order-2 lg:order-1">
                             <div>
                                 <div className="inline-flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-amber-600/10 rounded-lg">
@@ -463,18 +495,15 @@ const ContentSection = () => {
                             </div>
                         </div>
 
-                        {/* Right side - Image */}
-                        <div className="relative">
-                            {/* Main Image Container */}
-                            <div className="">
+                        {/* Desktop: Image Second */}
+                        <div className="hidden lg:block relative order-2">
+                            <div className="rounded-2xl overflow-hidden">
                                 <img
-                                    src="/sideImg3.jpg"
+                                    src="/sideImg4.jpg"
                                     alt="Influencer Collaborations"
-                                    className="w-full h-full"
+                                    className="w-full h-auto object-cover"
                                 />
                             </div>
-
-                            {/* Floating Elements */}
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-600/20 to-yellow-600/20 rounded-full blur-2xl"></div>
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-yellow-600/20 to-amber-600/20 rounded-full blur-2xl"></div>
                         </div>
@@ -486,25 +515,36 @@ const ContentSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="grid lg:grid-cols-2 gap-12 items-center"
+                        className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center"
                     >
-                        {/* Right side - Image */}
-                        <div className="relative">
-                            {/* Main Image Container */}
-                            <div className="">
+                        {/* Mobile: Image First */}
+                        <div className="lg:hidden relative w-full order-1">
+                            <div className="rounded-2xl overflow-hidden">
                                 <img
-                                    src="/sideImg1.jpg"
+                                    src="/sideImg3.jpg"
                                     alt="Visual Brand Identity"
-                                    className="w-full h-full"
+                                    className="w-full h-auto object-cover"
                                 />
                             </div>
-
-                            {/* Floating Elements */}
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-600/20 to-amber-600/20 rounded-full blur-2xl"></div>
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-amber-600/20 to-yellow-600/20 rounded-full blur-2xl"></div>
                         </div>
-                        {/* Left side - Text */}
-                        <div className="space-y-8">
+
+                        {/* Desktop: Image First */}
+                        <div className="hidden lg:block relative order-1">
+                            <div className="rounded-2xl overflow-hidden">
+                                <img
+                                    src="/sideImg3.jpg"
+                                    alt="Visual Brand Identity"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-600/20 to-amber-600/20 rounded-full blur-2xl"></div>
+                            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-amber-600/20 to-yellow-600/20 rounded-full blur-2xl"></div>
+                        </div>
+
+                        {/* Text (Always Second on Mobile, Second on Desktop too for this card) */}
+                        <div className="space-y-8 order-2">
                             <div>
                                 <div className="inline-flex items-center gap-3 mb-4">
                                     <div className="p-2 bg-yellow-600/10 rounded-lg">
@@ -557,8 +597,6 @@ const ContentSection = () => {
                                 </div>
                             </div>
                         </div>
-
-
                     </motion.div>
                 </div>
             </div>
@@ -615,13 +653,13 @@ const ServicesSection = () => {
                                     <CardDescription className="text-gray-400">
                                         {service.description}
                                     </CardDescription>
-                                    <Button
+                                    {/* <Button
                                         variant="ghost"
                                         className="mt-4 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 w-full justify-start"
                                     >
                                         Learn more
                                         <ChevronRight className="ml-2 w-4 h-4" />
-                                    </Button>
+                                    </Button> */}
                                 </CardContent>
                             </Card>
                         </motion.div>

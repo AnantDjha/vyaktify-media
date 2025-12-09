@@ -89,7 +89,7 @@ export default function SignUpForm() {
         setMessage(null) // Clear any existing message
 
         try {
-            const res = await axios.post("http://localhost:5000/register", { ...data, user_id: data.userId })
+            const res = await axios.post("BACKEND_URL/register", { ...data, user_id: data.userId })
 
             if (res.data.type === 'error') {
                 setMessage({

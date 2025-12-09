@@ -33,7 +33,7 @@ import axios from "axios";
 // Mock logo component - replace with your actual logo
 const Logo = ({ white }: { white?: boolean }) => (
     <div className="flex items-center space-x-2">
-        <img src={white ? "/navNewLogo.png" : "/vyaktifyLogo.png"} alt="logo" className="w-36 h-12 sm:w-48 sm:h-16" />
+        <img src={white ? "/navNewLogo.png" : "/vyaktifyLogo.png"} alt="logo" className="w-32 h-10 sm:w-48 sm:h-16" />
     </div>
 );
 
@@ -87,7 +87,7 @@ const Navbar = () => {
             setMessage(null)
 
             try {
-                const res = await axios.post("http://localhost:5000/send-contact-mail", {
+                const res = await axios.post("BACKEND_URL/send-contact-mail", {
                     name: formData.name,
                     email: formData.email,
                     desc: formData.description,

@@ -14,7 +14,7 @@ import { checkToken } from "./middleware/milddleware"
 dotenv.config()
 
 const app = express();
-app.use(cors({ origin: ["http://localhost:5173", "http://10.245.99.178:5173"] }))
+app.use(cors({ origin: ["http://localhost:5173", "http://10.245.99.178:5173", "https://www.vyaktifymedia.com"] }))
 app.use(bodyParser.json())
 
 
