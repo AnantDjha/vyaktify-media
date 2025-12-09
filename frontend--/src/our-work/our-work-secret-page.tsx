@@ -160,7 +160,6 @@ export default function WorksList() {
                 })
             }
         } catch (error: any) {
-            alert(error)
             console.error("Error deleting work:", error)
 
             let errorMessage = "Failed to delete work. Please try again."

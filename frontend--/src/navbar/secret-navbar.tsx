@@ -91,7 +91,6 @@ export default function SecretNavbar() {
         setIsMenuOpen(false)
 
         // Show success message (optional)
-        alert('Logged out successfully!')
     }
 
     // Handle navigation

@@ -454,7 +454,6 @@ export default function OurWorksPage() {
 
                 setError(null)
             } catch (err) {
-                alert(err)
                 console.log(err);
                 setWorks(myWorks)
             } finally {
