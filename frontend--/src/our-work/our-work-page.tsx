@@ -446,7 +446,7 @@ export default function OurWorksPage() {
             try {
                 setLoading(true)
                 // Simulating API call - Replace with your actual API endpoint
-                const response = await axios.get('http://localhost:5000/get-our-works', {
+                const response = await axios.get('http://localhost:5000/get-our-workss', {
 
                 })
 

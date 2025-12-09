@@ -28,7 +28,6 @@ import {
     ChevronRight
 } from "lucide-react"
 import { motion } from "framer-motion"
-import axios from "axios"
 import { useState, useEffect } from "react"
 
 // Service data with category IDs
