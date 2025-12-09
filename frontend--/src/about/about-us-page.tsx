@@ -21,7 +21,7 @@ export default function AboutPage() {
                         <span className="text-white">Creating, Inspiring & Growing.</span>
                     </h1>
                     <p className="text-gray-300 text-sm md:text-base lg:text-lg max-w-3xl">
-                        Redefining digital experiences through innovative media solutions and strategic branding.
+                        Redefining digital and social experiences through innovative media solutions.
                     </p>
                 </motion.div>
 
@@ -216,7 +216,7 @@ export default function AboutPage() {
                                         </div>
 
                                         <h3 className="text-xl md:text-2xl font-bold text-white mb-1">Sahil Jha</h3>
-                                        <p className="text-amber-500 font-medium text-sm md:text-base mb-3 md:mb-4">Creative Director</p>
+                                        <p className="text-amber-500 font-medium text-sm md:text-base mb-3 md:mb-4">Director</p>
 
                                         <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-3 md:mb-4">
                                             A creative visionary with expertise in digital strategy, web development, and media production.
@@ -298,10 +298,10 @@ export default function AboutPage() {
 
                                         <div className="space-y-1.5 md:space-y-2 flex-grow">
                                             <p className="text-gray-400 text-xs">Email</p>
-                                            <p className="text-white text-xs md:text-sm font-medium truncate">hello@vyaktifymedia.com</p>
+                                            <p className="text-white text-xs md:text-sm font-medium truncate">vyaktifymedia@gmail.com</p>
 
                                             <p className="text-gray-400 text-xs mt-2 md:mt-3">Phone</p>
-                                            <p className="text-white text-xs md:text-sm font-medium">+91-XXXXXXXXXX</p>
+                                            <p className="text-white text-xs md:text-sm font-medium">+91-9172204177</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -364,7 +364,7 @@ export default function AboutPage() {
                     </div>
 
                     <p className="text-gray-400 text-xs md:text-sm">
-                        Vyaktify Media © {new Date().getFullYear()} • Crafting digital excellence
+                        Vyaktify Media © {new Date().getFullYear()} • Your Social Media Partner
                     </p>
                     <p className="text-gray-500 text-xs mt-1 md:mt-2">
                         Innovative digital solutions for the modern era

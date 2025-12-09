@@ -36,11 +36,11 @@ const serviceData = [
         id: 1,
         icon: UsersIcon,
         title: "Social Media Management",
-        description: "Comprehensive social media management that transforms your online presence into a powerful growth engine.",
+        description: "End-to-end social media management that transforms your online presence into a powerful growth engine.",
         detailedDescription: "We don't just post content—we build communities. Our team develops data-driven strategies to increase engagement, grow your following, and convert followers into loyal customers.",
         points: [
             "Content strategy & calendar planning",
-            "Daily community engagement & monitoring",
+            "Grid planning, Dm management",
             "Performance analytics & optimization",
             "Competitor analysis & market positioning"
         ],
@@ -740,12 +740,12 @@ export default function OurWorksPage() {
                                                     {/* Technologies Used */}
                                                     <div className="flex flex-wrap gap-1.5 pt-4 border-t border-gray-800">
                                                         {work.tech.slice(0, 3).map((tech: string, i: number) => (
-                                                            <Badge key={i} variant="outline" className="text-xs px-2 py-1 bg-gray-800/50 border-gray-700">
+                                                            <Badge key={i} variant="outline" className="text-xs px-2 py-1 bg-gray-800/50 border-gray-700 text-white">
                                                                 {tech}
                                                             </Badge>
                                                         ))}
                                                         {work.tech.length > 3 && (
-                                                            <Badge variant="outline" className="text-xs px-2 py-1 bg-gray-800/50 border-gray-700">
+                                                            <Badge variant="outline" className="text-white" >
                                                                 +{work.tech.length - 3}
                                                             </Badge>
                                                         )}

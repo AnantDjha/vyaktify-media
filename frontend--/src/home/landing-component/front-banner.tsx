@@ -60,7 +60,7 @@ export const FrontBanner = () => {
                             Your end-to-end partner for{" "}
                             <span className="relative inline-block mt-6">
                                 <span className="relative z-10 bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent font-bold">
-                                    content creation,
+                                    Content Creation,
                                 </span>
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}

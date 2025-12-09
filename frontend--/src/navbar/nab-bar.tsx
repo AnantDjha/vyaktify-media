@@ -353,15 +353,15 @@ const Navbar = () => {
                                             <div className="space-y-4">
                                                 <div className="flex items-center space-x-3 text-gray-400">
                                                     <Phone className="w-5 h-5 text-amber-500" />
-                                                    <span>+1 (555) 123-4567</span>
+                                                    <span>+91 9172204177</span>
                                                 </div>
                                                 <div className="flex items-center space-x-3 text-gray-400">
                                                     <Mail className="w-5 h-5 text-amber-500" />
-                                                    <span>contact@vyaktify.com</span>
+                                                    <span>vyaktifymedia@gmail.com</span>
                                                 </div>
                                                 <div className="flex items-center space-x-3 text-gray-400">
                                                     <MapPin className="w-5 h-5 text-amber-500" />
-                                                    <span>123 Business Ave, Suite 100</span>
+                                                    <span>Mumbai, Maharashtra</span>
                                                 </div>
                                             </div>
                                         </div>

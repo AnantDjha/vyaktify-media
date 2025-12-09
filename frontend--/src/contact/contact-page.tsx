@@ -143,18 +143,18 @@ export default function ContactPage() {
                                 <div className="space-y-4 z-index-2">
 
                                     {/* PHONE */}
-                                    <a href="tel:+919028828688" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block">
+                                    <a href="tel:+919172204177" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block">
                                         <div className="flex-shrink-0 p-2 bg-green-500/10 rounded-lg">
                                             <Phone className="w-4 h-4 text-green-500" />
                                         </div>
                                         <div>
                                             <p className="text-gray-400 text-xs mb-1">Phone</p>
-                                            <p className="text-white font-medium text-sm">+919028828688</p>
+                                            <p className="text-white font-medium text-sm">+919172204177</p>
                                         </div>
                                     </a>
 
                                     {/* EMAIL */}
-                                    <a href="mailto:contact@vyaktify.com" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block">
+                                    <a href="mailto:vyaktifymedia@gmail.com" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block">
                                         <div className="flex-shrink-0 p-2 bg-amber-500/10 rounded-lg">
                                             <Mail className="w-4 h-4 text-amber-500" />
                                         </div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <p className="text-gray-400 text-xs mb-1">Address</p>
-                                            <p className="text-white font-medium text-sm">123 Business Ave, Suite 100</p>
+                                            <p className="text-white font-medium text-sm">Mumbai, Maharashtra</p>
                                         </div>
                                     </div>
 
@@ -257,27 +257,27 @@ export default function ContactPage() {
                                     <div className="space-y-4">
 
                                         {/* PHONE */}
-                                        <a href="tel:+919028828688" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block group">
+                                        <a href="tel:+919172204177" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block group">
                                             <div className="flex-shrink-0 p-2 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
                                                 <Phone className="w-5 h-5 text-green-500" />
                                             </div>
                                             <div>
                                                 <p className="text-gray-400 text-xs mb-1">Phone</p>
                                                 <p className="text-white font-medium text-base group-hover:text-green-400 transition-colors">
-                                                    +919028828688
+                                                    +919172204177
                                                 </p>
                                             </div>
                                         </a>
 
                                         {/* EMAIL */}
-                                        <a href="mailto:contact@vyaktify.com" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block group">
+                                        <a href="mailto:vyaktifymedia@gmail.com" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block group">
                                             <div className="flex-shrink-0 p-2 bg-amber-500/10 rounded-lg group-hover:bg-amber-500/20 transition-colors">
                                                 <Mail className="w-5 h-5 text-amber-500" />
                                             </div>
                                             <div>
                                                 <p className="text-gray-400 text-xs mb-1">Email</p>
                                                 <p className="text-white font-medium text-base group-hover:text-amber-400 transition-colors">
-                                                    contact@vyaktify.com
+                                                    vyaktifymedia@gmail.com
                                                 </p>
                                             </div>
                                         </a>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                                             <div>
                                                 <p className="text-gray-400 text-xs mb-1">Address</p>
                                                 <p className="text-white font-medium text-base">
-                                                    123 Business Ave, Suite 100
+                                                    Mumbai, Maharashtra
                                                 </p>
                                             </div>
                                         </div>
@@ -549,7 +549,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex flex-wrap gap-3">
-                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/company/vyaktifymedia/" target="_blank" rel="noopener noreferrer">
                                             <Badge className="bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border-blue-500/30 px-4 py-2 cursor-pointer transition-colors group">
                                                 <Linkedin className="w-3.5 h-3.5 mr-2 group-hover:scale-110 transition-transform" />
                                                 LinkedIn
@@ -557,7 +557,7 @@ export default function ContactPage() {
                                             </Badge>
                                         </a>
 
-                                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.instagram.com/vyaktifymedia?igsh=MWluc2puNmVjNzQ3cg==" target="_blank" rel="noopener noreferrer">
                                             <Badge className="bg-pink-500/10 hover:bg-pink-500/20 text-pink-400 border-pink-500/30 px-4 py-2 cursor-pointer transition-colors group">
                                                 <Instagram className="w-3.5 h-3.5 mr-2 group-hover:scale-110 transition-transform" />
                                                 Instagram
@@ -565,13 +565,13 @@ export default function ContactPage() {
                                             </Badge>
                                         </a>
 
-                                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                        {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                                             <Badge className="bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border-sky-500/30 px-4 py-2 cursor-pointer transition-colors group">
                                                 <Twitter className="w-3.5 h-3.5 mr-2 group-hover:scale-110 transition-transform" />
                                                 Twitter
                                                 <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                                             </Badge>
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </div>
                             </CardContent>

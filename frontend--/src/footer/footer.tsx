@@ -56,57 +56,41 @@ export default function Footer() {
     ]
 
     const socialLinks = [
-        {
-            platform: "Facebook",
-            icon: <Facebook className="w-4 h-4" />,
-            href: "https://facebook.com/vyaktifymedia",
-            color: "hover:text-blue-500 hover:border-blue-500/50"
-        },
-        {
-            platform: "Twitter",
-            icon: <Twitter className="w-4 h-4" />,
-            href: "https://twitter.com/vyaktifymedia",
-            color: "hover:text-sky-500 hover:border-sky-500/50"
-        },
+
         {
             platform: "Instagram",
             icon: <Instagram className="w-4 h-4" />,
-            href: "https://instagram.com/vyaktifymedia",
+            href: "https://www.instagram.com/vyaktifymedia?igsh=MWluc2puNmVjNzQ3cg==",
             color: "hover:text-pink-500 hover:border-pink-500/50"
         },
         {
             platform: "LinkedIn",
             icon: <Linkedin className="w-4 h-4" />,
-            href: "https://linkedin.com/company/vyaktify-media",
+            href: "https://www.linkedin.com/company/vyaktifymedia/",
             color: "hover:text-blue-600 hover:border-blue-600/50"
         },
-        {
-            platform: "YouTube",
-            icon: <Youtube className="w-4 h-4" />,
-            href: "https://youtube.com/@vyaktifymedia",
-            color: "hover:text-red-500 hover:border-red-500/50"
-        }
+
     ]
 
     const contactInfo = [
         {
             icon: <Phone className="w-4 h-4" />,
             label: "Phone",
-            value: "+91 90288 28688",
-            href: "tel:+919028828688",
+            value: "+91 9172204177",
+            href: "tel:+919172204177",
             color: "text-green-400"
         },
         {
             icon: <Mail className="w-4 h-4" />,
             label: "Email",
-            value: "contact@vyaktify.com",
-            href: "mailto:contact@vyaktify.com",
+            value: "vyaktifymedia@gmail.com",
+            href: "mailto:vyaktifymedia@gmail.com",
             color: "text-amber-400"
         },
         {
             icon: <MapPin className="w-4 h-4" />,
             label: "Address",
-            value: "123 Business Ave, Suite 100, Mumbai, India",
+            value: "Mumbai, Maharashtra",
             color: "text-purple-400"
         }
     ]
@@ -353,7 +337,7 @@ export default function Footer() {
                         {/* Quick Contact */}
                         <div className="flex items-center gap-4 text-sm">
                             <a
-                                href="tel:+919028828688"
+                                href="tel:+919172204177"
                                 className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
                             >
                                 <Phone className="w-3 h-3" />
@@ -361,7 +345,7 @@ export default function Footer() {
                             </a>
                             <span className="text-gray-600 hidden sm:inline">•</span>
                             <a
-                                href="mailto:contact@vyaktify.com"
+                                href="mailto:vyaktifymedia@gmail.com"
                                 className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
                             >
                                 <Mail className="w-3 h-3" />

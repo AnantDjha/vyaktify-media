@@ -15,54 +15,57 @@ import LoginForm from './forms/login-form'
 import SecretNavbar from './navbar/secret-navbar'
 import WorksList from './our-work/our-work-secret-page'
 import Footer from './footer/footer'
+import ScrollToTop from './scroll/scroll'
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: '/home',
-      element: <><LandingPage /><AllSections /><Navbar /> <Footer /></>,
+      element: <><ScrollToTop /><LandingPage /><AllSections /><Navbar /> <Footer /></>,
     },
     {
       path: '/',
-      element: <TempCompo />,
+      element: <><ScrollToTop /> <TempCompo /></>,
     },
     {
       path: '/about',
-      element: <><AboutPage /> <Navbar /> <Footer /></>,
+      element: <><ScrollToTop /><AboutPage /> <Navbar /> <Footer /></>,
     },
     {
       path: '/contact',
-      element: <><ContactPage /> <Navbar /> <Footer /></>,
+      element: <><ScrollToTop /><ContactPage /> <Navbar /> <Footer /></>,
     },
     {
       path: '/works',
-      element: <><OurWorksPage /> <Navbar /> <Footer /></>,
+      element: <><ScrollToTop /><OurWorksPage /> <Navbar /> <Footer /></>,
     },
     {
       path: '/services',
-      element: <><ServicesPage /><Navbar /> <Footer /></>,
+      element: <><ScrollToTop /><ServicesPage /><Navbar /> <Footer /></>,
     },
     {
       path: '/works-form',
-      element: <><AddWorkPage /><SecretNavbar /></>,
+      element: <><ScrollToTop /><AddWorkPage /><SecretNavbar /></>,
     },
     {
       path: '/signup',
-      element: <><SignUpForm /><SecretNavbar /></>,
+      element: <><ScrollToTop /><SignUpForm /><SecretNavbar /></>,
     },
     {
       path: '/login',
-      element: <><LoginForm /></>,
+      element: <><ScrollToTop /><LoginForm /></>,
     },
     {
       path: '/manage-our-works',
-      element: <><WorksList /><SecretNavbar /></>,
+      element: <><ScrollToTop /><WorksList /><SecretNavbar /></>,
     }
   ])
 
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
   )
 
 }
