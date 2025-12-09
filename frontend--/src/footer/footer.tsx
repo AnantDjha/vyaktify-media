@@ -6,11 +6,9 @@ import {
     Mail,
     Phone,
     MapPin,
-    Facebook,
-    Twitter,
+
     Instagram,
     Linkedin,
-    Youtube,
     ArrowRight,
     ChevronUp,
     Sparkles,

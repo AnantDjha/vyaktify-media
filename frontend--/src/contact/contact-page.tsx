@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Globe, Sparkles, Zap, Target, Award, Linkedin, Instagram, Twitter, ExternalLink, AlertCircle, Check, X } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Globe, Sparkles, Zap, Target, Award, Linkedin, Instagram, ExternalLink, AlertCircle, Check, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import axios from "axios"
 

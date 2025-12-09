@@ -3,7 +3,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import {
     Sparkles,
@@ -11,7 +10,6 @@ import {
     Zap,
     Target,
     CheckCircle,
-    Users,
     BarChart,
     AlertCircle,
     Loader2,
@@ -227,23 +225,23 @@ const servicesData = [
 ]
 
 // Create unique categories from services data
-const categories = [
-    { id: "all", name: "All" },
-    ...Array.from(new Set(servicesData.map(service => service.categoryId)))
-        .map(id => {
-            const service = servicesData.find(s => s.categoryId === id)
-            return {
-                id: id.toString(),
-                name: service?.category || `Category ${id}`
-            }
-        })
-]
+// const categories = [
+//     { id: "all", name: "All" },
+//     ...Array.from(new Set(servicesData.map(service => service.categoryId)))
+//         .map(id => {
+//             const service = servicesData.find(s => s.categoryId === id)
+//             return {
+//                 id: id.toString(),
+//                 name: service?.category || `Category ${id}`
+//             }
+//         })
+// ]
 
 export default function ServicesPage() {
     const [services, setServices] = useState(servicesData)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
-    const [activeTab, setActiveTab] = useState("all")
+    const [activeTab, _setActiveTab] = useState("all")
     const [selectedService, setSelectedService] = useState<any>(null)
     const [dialogOpen, setDialogOpen] = useState(false)
 
@@ -342,7 +340,6 @@ export default function ServicesPage() {
                     ) : (
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                             {filteredServices.map((service, index) => {
-                                const IconComponent = service.icon
                                 const HighlightIcon = service.highlightIcon
 
                                 return (
