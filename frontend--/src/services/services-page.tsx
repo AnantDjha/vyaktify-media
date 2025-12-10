@@ -24,8 +24,6 @@ import {
     Megaphone,
     Globe,
     Smartphone,
-    Clock,
-    ChevronRight
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
@@ -375,12 +373,7 @@ export default function ServicesPage() {
                                                 </div>
 
                                                 {/* Duration Badge */}
-                                                <div className="absolute bottom-4 left-4 z-20">
-                                                    <Badge className="bg-black/60 backdrop-blur-sm text-gray-300 border-gray-700 text-xs">
-                                                        <Clock className="w-3 h-3 mr-1" />
-                                                        {service.duration}
-                                                    </Badge>
-                                                </div>
+
                                             </div>
 
                                             <CardContent className="p-5 md:p-6">
@@ -454,10 +447,7 @@ export default function ServicesPage() {
                                         <Badge className={`bg-gradient-to-r ${selectedService.color} text-white border-none`}>
                                             {selectedService.category}
                                         </Badge>
-                                        <Badge className="bg-gray-800 text-gray-300 border-gray-700">
-                                            <Clock className="w-3 h-3 mr-1" />
-                                            {selectedService.duration}
-                                        </Badge>
+
                                     </div>
                                 </DialogDescription>
                             </DialogHeader>
@@ -512,19 +502,7 @@ export default function ServicesPage() {
                                         </div>
                                     </div>
 
-                                    <div className="p-4 rounded-lg border border-gray-700 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
-                                        <h4 className="text-white font-semibold mb-3">Ready to Get Started?</h4>
-                                        <div className="space-y-3">
-                                            <Button className={`w-full bg-gradient-to-r ${selectedService.color} text-white font-semibold hover:opacity-90 transition-all duration-300`}>
-                                                <Sparkles className="w-5 h-5 mr-2" />
-                                                Start This Service
-                                            </Button>
-                                            <Button variant="outline" className="w-full border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white">
-                                                <ChevronRight className="w-5 h-5 mr-2" />
-                                                Schedule a Consultation
-                                            </Button>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </DialogContent>
