@@ -191,7 +191,7 @@ export default function AboutPage() {
                                     <div className="relative mb-4 md:mb-6">
                                         <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
                                             <img
-                                                src="/service1.jpg"
+                                                src="/founderImg.jpg"
                                                 alt="Sahil Jha - Founder"
                                                 className="w-full h-full object-cover"
                                             />

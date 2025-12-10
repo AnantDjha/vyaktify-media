@@ -3,18 +3,20 @@ import nodemailer from "nodemailer";
 type SendMailFunction = (email: string, subject: string, text: string, html: string) => Promise<boolean>;
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp-relay.brevo.com",
     port: 465,
     secure: true, // use SSL
     auth: {
-        user: "aayushjha0112@gmail.com",
-        pass: "ktfn tohw kaxu hyds",
+        // user: "aayushjha0112@gmail.com",
+        // pass: "ktfn tohw kaxu hyds",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
 const sendMail: SendMailFunction = async (email, subject, text, html) => {
     const mailOptions = {
-        from: "aayushjha0112@gmail.com",
+        from: `'Vyaktify media' <${process.env.EMAIL_ID}>`,
         to: email,
         subject: subject,
         text: text,
