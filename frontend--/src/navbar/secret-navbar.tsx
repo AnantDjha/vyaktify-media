@@ -12,7 +12,8 @@ import {
     X,
     Sparkles,
     Home,
-    User
+    User,
+    MessageCircle
 } from "lucide-react"
 
 interface UserData {
@@ -29,6 +30,14 @@ export default function SecretNavbar() {
     const [userData, setUserData] = useState<UserData | null>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const session = localStorage.getItem("session")
+
+        if (!session) {
+            navigate("/login")
+        }
+    }, [])
 
     // Check if user is logged in on component mount
     useEffect(() => {
@@ -172,6 +181,14 @@ export default function SecretNavbar() {
                                         <span>Manage Work</span>
                                     </Button>
 
+                                    <Button
+                                        onClick={() => handleNavigate('/my-cusomer-messages')}
+                                        className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 px-6 py-2 rounded-xl flex items-center gap-2 group"
+                                    >
+                                        <MessageCircle className="w-4 h-4" />
+                                        <span>Notifications</span>
+                                    </Button>
+
                                     {/* Logout Button */}
                                     <Button
                                         onClick={handleLogout}
@@ -203,6 +220,14 @@ export default function SecretNavbar() {
                                     >
                                         <Home className="w-4 h-4" />
                                         <span>Manage Work</span>
+                                    </Button>
+
+                                    <Button
+                                        onClick={() => handleNavigate('/my-cusomer-messages')}
+                                        className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 px-6 py-2 rounded-xl flex items-center gap-2 group"
+                                    >
+                                        <MessageCircle className="w-4 h-4" />
+                                        <span>Notifications</span>
                                     </Button>
 
                                     {/* Register Button */}
@@ -353,6 +378,14 @@ export default function SecretNavbar() {
                                                     <User className="w-5 h-5" />
                                                     <span>Create Work</span>
                                                 </button>
+
+                                                <Button
+                                                    onClick={() => handleNavigate('/my-cusomer-messages')}
+                                                    className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 px-6 py-2 rounded-xl flex items-center gap-2 group"
+                                                >
+                                                    <MessageCircle className="w-4 h-4" />
+                                                    <span>Notifications</span>
+                                                </Button>
 
                                                 <button
                                                     onClick={() => {

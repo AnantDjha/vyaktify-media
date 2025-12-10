@@ -10,6 +10,7 @@ import { vyaktifyMediaUserCollection } from "./model/user-schema"
 import { generateToken } from "./authentication"
 import sendMail from "./mail"
 import { checkToken } from "./middleware/milddleware"
+import { vyaktifymediaMessageCollection } from "./model/messages-schema"
 
 dotenv.config()
 
@@ -172,7 +173,30 @@ app.post("/send-contact-mail", async (request: Request, response: Response) => {
         const b = await sendMail("aayushjha0112@gmail.com", "hey sahil someone contacted you!", body, '')
         if (!b) throw new Error("Something went wrong!")
 
+        const id = await vyaktifymediaMessageCollection.find({});
+
+        const savingData = new vyaktifymediaMessageCollection({
+            id: id.length + 1,
+            name: name,
+            email,
+            phone: mobile,
+            description: desc
+        })
+
+        await savingData.save();
+
         response.status(200).json({ type: "success", message: "Thanks for contacting us!" });
+    } catch (error) {
+        response.status(500).json({ type: "error", message: "Something went wrong! Please try again." })
+    }
+})
+
+app.get("/get-my-messages", async (request: Request, response: Response) => {
+    try {
+        const data = await vyaktifymediaMessageCollection.find({});
+        console.log(data);
+
+        response.status(200).json({ type: "success", data: data });
     } catch (error) {
         response.status(500).json({ type: "error", message: "Something went wrong! Please try again." })
     }
@@ -185,6 +209,19 @@ app.get("/get-our-works", async (req: Request, res: Response) => {
 
 
         res.status(200).json({ type: "success", data: data })
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({ type: "error", data: [] })
+    }
+})
+
+app.put("/update-message-to-read", async (req: Request, res: Response) => {
+    try {
+        const { id } = req.body;
+        await vyaktifyMediaWorkCollection.updateOne({ id }, { $set: { seen: true } });
+
+
+        res.status(200).json({ type: "success", message: "Marked as seen successfully!" })
     } catch (e) {
         console.log(e);
         res.status(500).json({ type: "error", data: [] })
@@ -337,6 +374,8 @@ app.post("/post-our-works", upload.single('image'), checkToken, async (req: Requ
         });
     }
 });
+
+
 
 
 app.listen(5000, () => {

@@ -16,6 +16,8 @@ import SecretNavbar from './navbar/secret-navbar'
 import WorksList from './our-work/our-work-secret-page'
 import Footer from './footer/footer'
 import ScrollToTop from './scroll/scroll'
+import NotFound from './endPage/end-page'
+import MessageInbox from './message/available-maessage'
 
 function App() {
 
@@ -59,6 +61,14 @@ function App() {
     {
       path: '/manage-our-works',
       element: <><ScrollToTop /><WorksList /><SecretNavbar /></>,
+    },
+    {
+      path: '/my-cusomer-messages',
+      element: <><ScrollToTop /><MessageInbox /><SecretNavbar /></>,
+    },
+    {
+      path: "/*",
+      element: <><NotFound /><Navbar /></>
     }
   ])
 
