@@ -15,7 +15,7 @@ import { vyaktifymediaMessageCollection } from "./model/messages-schema"
 dotenv.config()
 
 const app = express();
-app.use(cors({ origin: ["http://localhost:5173", "http://10.245.99.178:5173", "https://www.vyaktifymedia.com"] }))
+app.use(cors({ origin: ["http://localhost:5173", "http://10.245.99.178:5173", "https://www.vyaktifymedia.com", "https://vyaktifymedia.com"] }))
 app.use(bodyParser.json())
 
 
