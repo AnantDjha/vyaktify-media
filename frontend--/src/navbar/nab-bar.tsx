@@ -472,11 +472,11 @@ const Navbar = () => {
                                             <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                                                 <div className="flex items-center space-x-2 text-gray-400">
                                                     <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500" />
-                                                    <span>+1 (555) 123-4567</span>
+                                                    <span>+91 9172204177</span>
                                                 </div>
                                                 <div className="flex items-center space-x-2 text-gray-400">
                                                     <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500" />
-                                                    <span>hello@vyaktify.com</span>
+                                                    <span>vyaktifymedia@gmail.com</span>
                                                 </div>
                                             </div>
                                         </Card>
