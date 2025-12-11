@@ -605,7 +605,7 @@ export default function ContactPage() {
                                     <p className="text-gray-400 text-xs md:text-sm">Client Satisfaction</p>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-green-500 mb-1">50+</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-green-500 mb-1">250+</div>
                                     <p className="text-gray-400 text-xs md:text-sm">Projects Completed</p>
                                 </div>
                                 <div className="text-center">

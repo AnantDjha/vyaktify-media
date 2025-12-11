@@ -49,7 +49,7 @@ export default function AboutPage() {
                                     </div>
                                     <div>
                                         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">Vyaktify Media</h2>
-                                        <p className="text-amber-500 font-medium text-sm md:text-base">Digital Media Agency</p>
+                                        <p className="text-amber-500 font-medium text-sm md:text-base">Creative Media Agency</p>
                                     </div>
                                 </div>
 
