@@ -34,7 +34,7 @@ import { BACKEND_URL } from "@/constant";
 // Mock logo component - replace with your actual logo
 const Logo = ({ white }: { white?: boolean }) => (
     <div className="flex items-center space-x-2">
-        <img src={white ? "/navNewLogo.png" : "/vyaktifyLogo.png"} alt="logo" className="w-32 h-10 sm:w-48 sm:h-16" />
+        <img src={white ? "/navNewLogo.png" : "/vyaktifyLogo.png"} alt="Vyaktify Media Logo" className="w-32 h-10 sm:w-48 sm:h-16" />
     </div>
 );
 

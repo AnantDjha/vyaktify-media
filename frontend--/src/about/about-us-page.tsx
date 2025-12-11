@@ -2,10 +2,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Building, Mail, Globe, Sparkles, Target, Award, Calendar, MessageSquare, Zap, Layers, TrendingUp, Shield, Rocket } from "lucide-react"
 import { motion } from "framer-motion"
+import SEO from "@/components/seo"
 
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-950 p-4 md:p-8">
+            <SEO
+                title="About Us | Vyaktify Media"
+                description="Learn about Vyaktify Media, our mission, vision, and the team driving innovation in digital media and technology."
+            />
             <div className="max-w-7xl mx-auto mt-16 md:mt-20 lg:max-w-[85%] xl:max-w-[80%]">
                 {/* Header */}
                 <motion.div

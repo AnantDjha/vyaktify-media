@@ -2,10 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Home, Search, Ghost, Waypoints } from "lucide-react";
+import SEO from "@/components/seo";
 
 const NotFound = () => {
     return (
         <div className="min-h-screen w-full flex items-center justify-center bg-background overflow-hidden relative selection:bg-primary/20">
+            <SEO
+                title="Page Not Found | Vyaktify Media"
+                description="The page you are dragging for does not exist."
+            />
 
             {/* --- Ambient Background Effects --- */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 animate-pulse" />

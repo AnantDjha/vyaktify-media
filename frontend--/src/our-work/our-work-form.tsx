@@ -4,6 +4,7 @@ import axios from "axios";
 import WorkForm from "./temp-form";
 import { useNavigate } from "react-router-dom";
 import { AlertCircle, Check, X } from "lucide-react";
+import SEO from "@/components/seo";
 import { BACKEND_URL } from "@/constant";
 
 interface Message {
@@ -137,6 +138,10 @@ export function AddWorkPage() {
 
     return (
         <div className="relative min-h-screen">
+            <SEO
+                title="Add New Work | Vyaktify Media"
+                description="Add a new project to the portfolio."
+            />
             {/* Floating Message Bar */}
             <AnimatePresence>
                 {message && (

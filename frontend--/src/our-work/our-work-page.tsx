@@ -25,6 +25,7 @@ import {
     Smartphone
 } from "lucide-react"
 import { motion } from "framer-motion"
+import SEO from "@/components/seo"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
@@ -479,6 +480,10 @@ export default function OurWorksPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-950 p-4 md:p-8">
+            <SEO
+                title="Our Portfolio | Vyaktify Media"
+                description="Browse our portfolio of successful projects in digital marketing, video production, web development, and more."
+            />
             <div className="max-w-7xl mx-auto mt-16 md:mt-20 lg:max-w-[85%] xl:max-w-[80%]">
                 {/* Header */}
                 <motion.div

@@ -26,6 +26,7 @@ import {
     Smartphone,
 } from "lucide-react"
 import { motion } from "framer-motion"
+import SEO from "@/components/seo"
 import { useState, useEffect } from "react"
 
 // Service data with category IDs
@@ -271,6 +272,10 @@ export default function ServicesPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-950 p-4 md:p-8">
+            <SEO
+                title="Our Services | Vyaktify Media"
+                description="Explore our comprehensive digital services including social media management, video production, web development, and more."
+            />
             <div className="max-w-7xl mx-auto mt-16 md:mt-20 lg:max-w-[85%] xl:max-w-[80%]">
                 {/* Header */}
                 <motion.div
@@ -348,7 +353,7 @@ export default function ServicesPage() {
                                                 <div className="absolute inset-0 flex items-center justify-center">
                                                     <img
                                                         src={service.image}
-                                                        alt="service image"
+                                                        alt={service.title}
                                                         className="w-full h-full bg-cover"
                                                     />
                                                 </div>

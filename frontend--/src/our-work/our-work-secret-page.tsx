@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Trash2, Calendar, User, Image as ImageIcon, AlertCircle, Check, X, Sparkles, Loader2 } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import SEO from "@/components/seo"
 import { BACKEND_URL } from "@/constant"
 
 interface WorkData {
@@ -208,6 +209,10 @@ export default function WorksList() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-950 p-4 md:p-8 relative">
+            <SEO
+                title="Manage Our Works | Vyaktify Media Dashboard"
+                description="Manage your portfolio and project case studies."
+            />
             {/* Floating Message Bar */}
             <AnimatePresence>
                 {message && (

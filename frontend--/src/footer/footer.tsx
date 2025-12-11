@@ -109,7 +109,7 @@ export default function Footer() {
                     >
                         <div className="mb-6">
                             <Link to="/" className="inline-flex items-center gap-2 group">
-                                <img src="/navNewLogo.png" alt='vyaktify media' className="w-35 h-15" />
+                                <img src="/navNewLogo.png" alt='Vyaktify Media Footer Logo' className="w-35 h-15" />
                             </Link>
                         </div>
 

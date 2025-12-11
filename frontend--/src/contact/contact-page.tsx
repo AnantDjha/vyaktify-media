@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Globe, Sparkles, Zap, Target, Award, Linkedin, Instagram, ExternalLink, AlertCircle, Check, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import SEO from "@/components/seo"
 import axios from "axios"
 import { BACKEND_URL } from "@/constant"
 
@@ -97,6 +98,10 @@ export default function ContactPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-950 p-4 md:p-8">
+            <SEO
+                title="Contact Us | Vyaktify Media"
+                description="Get in touch with Vyaktify Media for your digital marketing, web development, and branding needs."
+            />
             {/* Floating Message Bar */}
 
 

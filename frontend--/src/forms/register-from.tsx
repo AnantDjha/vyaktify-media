@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { motion, AnimatePresence } from "framer-motion"
+import SEO from "@/components/seo"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -155,6 +156,10 @@ export default function SignUpForm() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-950 flex items-center justify-center p-4 relative pt-20">
+            <SEO
+                title="Sign Up | Vyaktify Media"
+                description="Create an account with Vyaktify Media to manage your projects and access exclusive features."
+            />
             {/* Floating Message Bar */}
             <AnimatePresence>
                 {message && (

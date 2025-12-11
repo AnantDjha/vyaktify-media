@@ -29,6 +29,7 @@ import {
     Loader2,
     ChevronRight,
 } from "lucide-react";
+import SEO from "@/components/seo";
 import { BACKEND_URL } from "@/constant";
 import { Button } from "@/components/ui/button";
 
@@ -179,6 +180,10 @@ export default function MessageInbox() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black pt-4 md:pt-8">
+            <SEO
+                title="Message Inbox | Vyaktify Media Dashboard"
+                description="View and manage customer messages."
+            />
             <div className="max-w-6xl mx-auto p-3 md:p-8 mt-20">
                 {/* Header with Mobile Optimization */}
                 <div className="mb-6 md:mb-8">
