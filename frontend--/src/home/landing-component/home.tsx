@@ -99,22 +99,22 @@ const testimonials = [
     {
         id: 1,
         quote: "Vyaktify transformed our social media presence completely. Their strategic approach and creative execution exceeded all our expectations.",
-        name: "Sarah Johnson",
-        role: "Marketing Director, TechCorp",
+        name: "Nisha Sanghvi",
+        role: "Founder, Learner’s Hub",
         avatar: "/avatar1.jpg"
     },
     {
         id: 2,
         quote: "The video production quality is outstanding! Our brand engagement increased by 300% after working with Vyaktify Media.",
-        name: "Michael Chen",
-        role: "CEO, StyleHub",
+        name: "Shreya Mantri",
+        role: "Founder, Altrove",
         avatar: "/avatar2.jpg"
     },
     {
         id: 3,
         quote: "Their influencer marketing strategy brought us phenomenal results. The team understands modern digital landscapes perfectly.",
-        name: "Priya Sharma",
-        role: "Brand Manager, EcoLife",
+        name: "Mrs. pavi",
+        role: "Founder, Monarch",
         avatar: "/avatar3.jpg"
     }
 ];
