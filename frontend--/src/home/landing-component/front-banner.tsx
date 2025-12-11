@@ -148,7 +148,7 @@ export const FrontBanner = () => {
                     >
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {[
-                                { value: "250+", label: "Projects Delivered" },
+                                { value: "150+", label: "Projects Delivered" },
                                 { value: "99%", label: "Client Satisfaction" },
                                 { value: "24/7", label: "Support" },
                                 { value: "360°", label: "Strategy" }

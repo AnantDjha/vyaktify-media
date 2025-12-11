@@ -597,7 +597,7 @@ export default function ContactPage() {
                         <CardContent className="p-5 md:p-6">
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-amber-500 mb-1">24h</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-amber-500 mb-1">3h</div>
                                     <p className="text-gray-400 text-xs md:text-sm">Avg. Response Time</p>
                                 </div>
                                 <div className="text-center">
@@ -605,7 +605,7 @@ export default function ContactPage() {
                                     <p className="text-gray-400 text-xs md:text-sm">Client Satisfaction</p>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-green-500 mb-1">250+</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-green-500 mb-1">150+</div>
                                     <p className="text-gray-400 text-xs md:text-sm">Projects Completed</p>
                                 </div>
                                 <div className="text-center">
