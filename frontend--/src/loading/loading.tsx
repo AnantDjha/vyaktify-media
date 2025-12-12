@@ -6,7 +6,7 @@ export const Loading = () => {
 
             {/* Center Logo */}
             <img
-                src="/loading_logo.JPG"
+                src="/mainLogo.png"
                 alt="Vyaktify Media Loading Indicator"
                 className="w-full h-full z-index-[-1] rounded-full object-cover"
             />
