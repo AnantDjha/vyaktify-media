@@ -166,7 +166,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <p className="text-gray-400 text-xs mb-1">Email</p>
-                                            <p className="text-white font-medium text-sm">contact@vyaktify.com</p>
+                                            <p className="text-white font-medium text-sm">vyaktifymedia@gmail.com"</p>
                                         </div>
                                     </a>
 
