@@ -18,6 +18,7 @@ import Footer from './footer/footer'
 import ScrollToTop from './scroll/scroll'
 import NotFound from './endPage/end-page'
 import MessageInbox from './message/available-maessage'
+import { Helmet } from 'react-helmet-async'
 
 function App() {
 
@@ -74,6 +75,17 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Vyaktify Media",
+            "url": "https://vyaktifymedia.com",
+            "logo": "https://vyaktifymedia.com/mainLogo.png"
+          })}
+        </script>
+      </Helmet>
       <RouterProvider router={router} />
     </>
   )
