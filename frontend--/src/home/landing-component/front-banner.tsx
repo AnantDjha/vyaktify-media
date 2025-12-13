@@ -67,10 +67,10 @@ export const FrontBanner = () => {
                         <span className="bg-gradient-to-r from-black via-gray-900 to-gray-800 bg-clip-text text-transparent">
                             Vyaktify Media
                         </span>{" "}
-                        <span className="block mt-2 text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
+                        <span className="block mt-2 text-2xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
                             Your end-to-end partner for{" "}
-                            <span className="relative inline-block">
-                                <span className="relative z-10 bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent font-bold">
+                            <span className="relative block">
+                                <span className="relative text-3xl sm:text-4xl z-10 bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent font-bold">
                                     Content Creation,
                                 </span>
                             </span>
