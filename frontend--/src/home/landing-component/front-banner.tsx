@@ -9,7 +9,7 @@ export const FrontBanner = () => {
         <div
             className="
                 relative w-full
-                pt-32 sm:pt-36 lg:pt-40      /* Push hero below navbar */
+                pt-22 sm:pt-36 lg:pt-40      /* Push hero below navbar */
                 pb-20 sm:pb-28
                 flex items-center
                 overflow-hidden
