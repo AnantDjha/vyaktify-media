@@ -606,7 +606,7 @@ const ContentSection = () => {
 
 const ServicesSection = () => {
     return (
-        <section className="py-16 bg-black">
+        <section className="py-16 bg-black hidden lg:block">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-left mb-12">
                     <motion.div

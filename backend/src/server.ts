@@ -170,7 +170,12 @@ app.post("/send-contact-mail", async (request: Request, response: Response) => {
             description: ${desc}
             
             `
-        const b = await sendMail("aayushjha0112@gmail.com", "hey sahil someone contacted you!", body, '')
+
+        console.log("_________________________________________________");
+
+        console.log(body);
+
+        const b = await sendMail("aayushjha0112@gmail.com", "hey sahil someone contacted you!", body, body)
         if (!b) throw new Error("Something went wrong!")
 
         const id = await vyaktifymediaMessageCollection.find({});
