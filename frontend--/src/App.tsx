@@ -82,7 +82,7 @@ function App() {
             "@type": "Organization",
             "name": "Vyaktify Media",
             "url": "https://vyaktifymedia.com",
-            "logo": "https://vyaktifymedia.com/mainLogo.png"
+            "logo": "https://vyaktifymedia.com/logo.png"
           })}
         </script>
       </Helmet>
