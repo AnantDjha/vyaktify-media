@@ -33,7 +33,7 @@ const brands = [
     { name: "Riz-wee Real estate", logo: "/IMG_1555.JPG", id: 6 },
     { name: "Learner's Hub", logo: "/IMG_1559.JPG", id: 10 },
     { name: "WeKids Media", logo: "/IMG_1558.JPG", id: 9 },
-    { name: "Dutch Space Interiors", logo: "/IMG_1550.JPG", id: 2 },
+    { name: "Umang properties", logo: "/IMG_1560.JPG", id: 2 },
 
 ];
 
