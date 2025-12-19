@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+# Disallow private paths
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+
+# Specifically ensure the favicon and assets are allowed
+Allow: /favicon.ico
+Allow: /logo.png
+Allow: /static/
