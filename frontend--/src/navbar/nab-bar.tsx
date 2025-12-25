@@ -44,7 +44,7 @@ const Navbar = () => {
 
 
     const navLinks = [
-        { label: "Home", to: "/home", icon: <Home className="w-4 h-4" /> },
+        { label: "Home", to: "/", icon: <Home className="w-4 h-4" /> },
         { label: "About Us", to: "/about", icon: <User className="w-4 h-4" /> },
         { label: "Services", to: "/services", icon: <Briefcase className="w-4 h-4" /> },
         { label: "Our Works", to: "/works", icon: <Layers className="w-4 h-4" /> },
@@ -313,8 +313,10 @@ const Navbar = () => {
                                     >
                                         {link.label}
                                         {
-                                            path.includes(link.to == '/' ? "home" : link.to) && (
-                                                <motion.span className="absolute bottom-1 left-0 w-[90%] h-1 bg-gradient-to-r from-amber-500 to-yellow-500 top-6 rounded-full"
+                                            /* Check if path is '/' and link.to is '/', OR check if path includes the link.to */
+                                            (path === link.to || (link.to !== '/' && path.includes(link.to))) && (
+                                                <motion.span
+                                                    className="absolute bottom-1 left-0 w-[90%] h-1 bg-gradient-to-r from-amber-500 to-yellow-500 top-6 rounded-full"
                                                     initial={{ width: 0 }}
                                                     animate={{ width: "90%" }}
                                                     transition={{ duration: 0.8, ease: "easeInOut" }}

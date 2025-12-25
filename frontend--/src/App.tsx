@@ -5,7 +5,7 @@ import { LandingPage } from './home/landing-page'
 import Navbar from './navbar/nab-bar'
 import AllSections from './home/landing-component/home'
 import ServicesPage from './services/services-page'
-import { TempCompo } from './home/landing-component/temp-compo'
+// import { TempCompo } from './home/landing-component/temp-compo'
 import AboutPage from './about/about-us-page'
 import ContactPage from './contact/contact-page'
 import OurWorksPage from './our-work/our-work-page'
@@ -29,7 +29,7 @@ function App() {
     },
     {
       path: '/',
-      element: <><ScrollToTop /> <TempCompo /></>,
+      element: <><><ScrollToTop /><LandingPage /><AllSections /><Navbar /> <Footer /></></>,
     },
     {
       path: '/about',
