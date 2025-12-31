@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function TestimonialsComingSoonPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-950 p-4">
-            <div className="max-w-3xl mx-auto mt-20 ">
+            <div className="w-full sm:max-w-[70vw] mx-auto mt-20 ">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function TestimonialsComingSoonPage() {
                     <Badge variant="outline" className="mb-4 border-blue-500/30 text-blue-400 hover:bg-blue-500/10">
                         Testimonials
                     </Badge>
-                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 text-start">
                         What Our Clients Say
                     </h1>
                     <p className="text-gray-300 text-start">
