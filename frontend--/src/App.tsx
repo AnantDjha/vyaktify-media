@@ -19,6 +19,7 @@ import ScrollToTop from './scroll/scroll'
 import NotFound from './endPage/end-page'
 import MessageInbox from './message/available-maessage'
 import { Helmet } from 'react-helmet-async'
+import ComingSoonPage from './testimonial/testimonial-page'
 
 function App() {
 
@@ -46,6 +47,10 @@ function App() {
     {
       path: '/services',
       element: <><ScrollToTop /><ServicesPage /><Navbar /> <Footer /></>,
+    },
+    {
+      path: '/testimonials',
+      element: <><ScrollToTop /><ComingSoonPage /><Navbar /> <Footer /></>,
     },
     {
       path: '/works-form',
