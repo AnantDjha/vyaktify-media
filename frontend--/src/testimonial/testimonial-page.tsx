@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function TestimonialsComingSoonPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-950 p-4">
-            <div className="max-w-3xl  mt-20 ">
+            <div className="max-w-3xl mx-auto mt-20 ">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
