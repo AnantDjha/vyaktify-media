@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+
+import emailjs from "@emailjs/browser";
+
 import {
     Phone,
     Mail,
@@ -28,8 +31,7 @@ import { Card } from "../components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../components/ui/dialog";
 import { Popover, PopoverContent, PopoverTrigger } from "../components/ui/popover";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../components/ui/tooltip";
-import axios from "axios";
-import { BACKEND_URL } from "@/constant";
+
 
 // Mock logo component - replace with your actual logo
 const Logo = ({ white }: { white?: boolean }) => (
@@ -88,49 +90,50 @@ const Navbar = () => {
             setMessage(null)
 
             try {
-                const res = await axios.post(`${BACKEND_URL}/send-contact-mail`, {
-                    name: formData.name,
-                    email: formData.email,
-                    desc: formData.description,
-                    mobile: formData.phone
-                })
 
-                if (res.data.type === 'error') {
-                    setMessage({
-                        type: 'error',
-                        text: res.data.message || 'Failed to send message'
-                    })
-                } else {
-                    setMessage({
-                        type: 'success',
-                        text: res.data.message || 'Message sent successfully!'
-                    })
-                    // Clear form on success
-                    setFormData({ name: "", email: "", phone: "", description: "" })
-                }
+                await emailjs.send(
+                    "service_ps93hoc",    // Service ID
+                    "template_kb2tn6r",   // Template ID
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                    },
+                    "8qVD3GkEmAymD3JTI"    // Public Key
+                )
 
-            } catch (error: any) {
-                console.error("Contact form error:", error)
+                await emailjs.send(
+                    "service_ps93hoc",    // Service ID
+                    "template_7bfu333",   // Template ID
+                    {
+                        name: formData.name,
+                        email: "anantjha0112@gmail.com",
+                        phone: formData.phone,
+                        description: formData.description
+                    },
+                    "8qVD3GkEmAymD3JTI"    // Public Key
+                )
 
-                let errorMessage = "Something went wrong. Please try again."
-
-                if (error.response) {
-                    errorMessage = error.response.data?.message ||
-                        error.response.data?.error ||
-                        `Server error: ${error.response.status}`
-                } else if (error.request) {
-                    errorMessage = "No response from server. Please check your connection."
-                } else {
-                    errorMessage = error.message || "Request failed."
-                }
-
+                setMessage(
+                    {
+                        type: "success",
+                        text: "Thankyou! we will contact you soon."
+                    }
+                )
+            } catch {
                 setMessage({
                     type: 'error',
-                    text: errorMessage
+                    text: 'Something went wrong!'
                 })
             } finally {
-                setIsSubmitting(false);
+                setIsSubmitting(false)
+                setFormData({
+                    name: "",
+                    phone: "",
+                    email: "",
+                    description: ""
+                })
             }
+
         };
 
         return (

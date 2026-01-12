@@ -9,8 +9,8 @@ import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Globe, Sparkles, Zap, Target, Award, Linkedin, Instagram, ExternalLink, AlertCircle, Check, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import SEO from "@/components/seo"
-import axios from "axios"
-import { BACKEND_URL } from "@/constant"
+import emailjs from "@emailjs/browser";
+
 
 interface Message {
     type: 'success' | 'error';
@@ -40,52 +40,53 @@ export default function ContactPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setMessage(null);
+        setMessage(null)
 
         try {
-            const res = await axios.post(`${BACKEND_URL}/send-contact-mail`, {
-                name: formData.name,
-                email: formData.email,
-                desc: formData.description,
-                mobile: formData.phone
-            });
 
-            if (res.data.type === 'error') {
-                setMessage({
-                    type: 'error',
-                    text: res.data.message || 'Failed to send message'
-                });
-            } else {
-                setMessage({
-                    type: 'success',
-                    text: res.data.message || 'Message sent successfully! We\'ll get back to you within 24 hours.'
-                });
-                // Clear form on success
-                setFormData({ name: "", email: "", phone: "", description: "" });
-            }
+            await emailjs.send(
+                "service_ps93hoc",    // Service ID
+                "template_kb2tn6r",   // Template ID
+                {
+                    name: formData.name,
+                    email: formData.email,
+                },
+                "8qVD3GkEmAymD3JTI"    // Public Key
+            )
 
-        } catch (error: any) {
-            console.error("Contact form error:", error);
+            await emailjs.send(
+                "service_ps93hoc",    // Service ID
+                "template_7bfu333",   // Template ID
+                {
+                    name: formData.name,
+                    email: "anantjha0112@gmail.com",
+                    phone: formData.phone,
+                    description: formData.description
+                },
+                "8qVD3GkEmAymD3JTI"    // Public Key
+            )
 
-            let errorMessage = "Something went wrong. Please try again.";
-
-            if (error.response) {
-                errorMessage = error.response.data?.message ||
-                    error.response.data?.error ||
-                    `Server error: ${error.response.status}`;
-            } else if (error.request) {
-                errorMessage = "No response from server. Please check your connection.";
-            } else {
-                errorMessage = error.message || "Request failed.";
-            }
-
+            setMessage(
+                {
+                    type: "success",
+                    text: "Thankyou! we will contact you soon."
+                }
+            )
+        } catch {
             setMessage({
                 type: 'error',
-                text: errorMessage
-            });
+                text: 'Something went wrong!'
+            })
         } finally {
-            setIsSubmitting(false);
+            setIsSubmitting(false)
+            setFormData({
+                name: "",
+                phone: "",
+                email: "",
+                description: ""
+            })
         }
+
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
