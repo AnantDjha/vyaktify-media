@@ -74,8 +74,8 @@ export default function Footer() {
         {
             icon: <Phone className="w-4 h-4" />,
             label: "Phone",
-            value: "+91 9172204177",
-            href: "tel:+919172204177",
+            value: "+91 8766533394",
+            href: "tel:+918766533394",
             color: "text-green-400"
         },
         {
@@ -335,7 +335,7 @@ export default function Footer() {
                         {/* Quick Contact */}
                         <div className="flex items-center gap-4 text-sm">
                             <a
-                                href="tel:+919172204177"
+                                href="tel:+918766533394"
                                 className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
                             >
                                 <Phone className="w-3 h-3" />

@@ -150,13 +150,13 @@ export default function ContactPage() {
                                 <div className="space-y-4 z-index-2">
 
                                     {/* PHONE */}
-                                    <a href="tel:+919172204177" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block">
+                                    <a href="tel:+918766533394" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block">
                                         <div className="flex-shrink-0 p-2 bg-green-500/10 rounded-lg">
                                             <Phone className="w-4 h-4 text-green-500" />
                                         </div>
                                         <div>
                                             <p className="text-gray-400 text-xs mb-1">Phone</p>
-                                            <p className="text-white font-medium text-sm">+919172204177</p>
+                                            <p className="text-white font-medium text-sm">+918766533394</p>
                                         </div>
                                     </a>
 
@@ -264,14 +264,14 @@ export default function ContactPage() {
                                     <div className="space-y-4">
 
                                         {/* PHONE */}
-                                        <a href="tel:+919172204177" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block group">
+                                        <a href="tel:+918766533394" className="flex items-start gap-3 p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-colors block group">
                                             <div className="flex-shrink-0 p-2 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
                                                 <Phone className="w-5 h-5 text-green-500" />
                                             </div>
                                             <div>
                                                 <p className="text-gray-400 text-xs mb-1">Phone</p>
                                                 <p className="text-white font-medium text-base group-hover:text-green-400 transition-colors">
-                                                    +919172204177
+                                                    +918766533394
                                                 </p>
                                             </div>
                                         </a>

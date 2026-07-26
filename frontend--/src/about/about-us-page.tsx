@@ -306,7 +306,7 @@ export default function AboutPage() {
                                             <p className="text-white text-xs md:text-sm font-medium truncate">vyaktifymedia@gmail.com</p>
 
                                             <p className="text-gray-400 text-xs mt-2 md:mt-3">Phone</p>
-                                            <p className="text-white text-xs md:text-sm font-medium">+91-9172204177</p>
+                                            <p className="text-white text-xs md:text-sm font-medium">+91-8766533394</p>
                                         </div>
                                     </CardContent>
                                 </Card>
